@@ -9,7 +9,7 @@ app.use('/static', express.static(path.join(__dirname, 'static')));
 
 // Serve the HTML file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'FindMyLaptop.html'));
 });
 
 // Handle the search endpoint (dummy data for demonstration)
@@ -55,6 +55,7 @@ app.get('/search', (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on http://0.0.0.0:${PORT}`);
+  });
+  
